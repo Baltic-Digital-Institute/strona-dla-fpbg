@@ -1,65 +1,90 @@
-import Image from "next/image";
+import Image from "next/image"; // Will be used for hero image and value icons
 
 export default function Home() {
+  const values = [
+    { title: "SOLIDARNOŚĆ", description: "Odpowiadamy na potrzeby osób w kryzysie." },
+    { title: "PARTNERSTWO", description: "Budujemy trwałe relacje, które zwielokrotniają wpływ." },
+    { title: "ODWAGA", description: "Działamy tam, gdzie inni się wahają." },
+    { title: "SKUTECZNOŚĆ", description: "Łączymy empatię z mierzalnymi rezultatami." },
+  ];
+
   return (
-    <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
+    <main>
+      {/* Hero Section */}
+      <section className="bg-primary-main text-white py-20 px-4 flex flex-col items-center justify-center text-center">
+        <div className="container mx-auto">
+          <h1 className="text-4xl md:text-5xl font-heading mb-6 max-w-4xl leading-tight">
+            Fundacja Przyjaźń bez Granic. Pomorski Hub współpracy międzynarodowej i działań humanitarnych
           </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
+          <p className="text-lg md:text-xl font-body mb-8 max-w-3xl">
+            Budujemy dwukierunkowe mosty między Pomorzem a światem – wspierając spójność społeczną w regionie i niosąc skuteczną pomoc humanitarną za granicą.
           </p>
-        </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+          {/* Placeholder for Hero Image */}
+          <div className="relative w-full max-w-4xl mx-auto h-64 md:h-96 bg-gray-700 rounded-lg flex items-center justify-center overflow-hidden">
+            <span className="text-gray-300 text-xl">Placeholder dla grafiki Hero (Most/Mapa Pomorza)</span>
+            {/* When actual image is available, uncomment and replace:
             <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
+              src="/images/hero-map.svg" // Example path, needs to be created
+              alt="Abstrakcyjny symbol Mostu/Splotu na tle mapy Pomorza"
+              layout="fill"
+              objectFit="cover"
+              className="opacity-70"
             />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+            */}
+          </div>
         </div>
-      </main>
-    </div>
+      </section>
+
+      {/* Short Introduction Section (Optional - from spec, but not a separate todo yet) */}
+      <section className="bg-neutral-bg py-16 px-4 text-primary-main">
+        <div className="container mx-auto text-center">
+          <h2 className="text-3xl font-heading mb-6">Zorganizowana sprawczość</h2>
+          <p className="text-lg font-body max-w-3xl mx-auto">
+            Fundacja Przyjaźń bez Granic jest <strong className="font-semibold">niezależnym podmiotem</strong> o silnym etosie humanitarnym i zorganizowanym modelu działania. Łączymy empatię z efektywnością operacyjną, co zapewnia, że nasze działania są nie tylko potrzebne, ale i mierzalne. Nasza misja to <strong className="font-semibold">Solidarność</strong>, którą realizujemy w oparciu o najwyższe standardy, czyniąc nasze procesy transparentnymi i audytowalnymi.
+          </p>
+          {/* Placeholder for 3 icons */}
+          <div className="flex flex-wrap justify-center gap-8 mt-8">
+            <div className="flex flex-col items-center">
+              <div className="w-16 h-16 bg-accent-main rounded-full flex items-center justify-center mb-2">
+                <span className="text-white">🧑‍🤝‍🧑</span> {/* Placeholder Icon: Ludzie */}
+              </div>
+              <p className="text-sm font-body">Ludzie</p>
+            </div>
+            <div className="flex flex-col items-center">
+              <div className="w-16 h-16 bg-accent-main rounded-full flex items-center justify-center mb-2">
+                <span className="text-white">🌉</span> {/* Placeholder Icon: Most */}
+              </div>
+              <p className="text-sm font-body">Most</p>
+            </div>
+            <div className="flex flex-col items-center">
+              <div className="w-16 h-16 bg-accent-main rounded-full flex items-center justify-center mb-2">
+                <span className="text-white">🛡️</span> {/* Placeholder Icon: Tarcza */}
+              </div>
+              <p className="text-sm font-body">Profesjonalizm</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+      {/* Key Values Section */}
+      <section className="bg-white py-20 px-4 text-primary-main">
+        <div className="container mx-auto">
+          <h2 className="text-3xl md:text-4xl font-heading text-center mb-12">Nasze wartości - fundament działania</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {values.map((value, index) => (
+              <div key={index} className="flex flex-col items-center text-center p-6 bg-neutral-bg rounded-card shadow-soft">
+                {/* Placeholder for Icon */}
+                <div className="w-20 h-20 bg-accent-main rounded-full flex items-center justify-center mb-4">
+                  <span className="text-white text-3xl">💡</span> {/* Generic Placeholder Icon */}
+                </div>
+                <h3 className="text-xl font-heading mb-2">{value.title}</h3>
+                <p className="font-body text-gray-700">{value.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+    </main>
   );
 }
