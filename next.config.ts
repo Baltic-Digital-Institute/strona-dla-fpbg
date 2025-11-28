@@ -5,4 +5,10 @@ const nextConfig: NextConfig = {
   /* config options here */
 };
 
+module.exports = {
+  output: "export",
+  basePath: "/strona-dla-fpbg",
+  assetPrefix: "/strona-dla-fpbg",
+};
+
 export default nextConfig;
